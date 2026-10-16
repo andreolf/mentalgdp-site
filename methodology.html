@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Methodology · Global Mental Health Index</title>
+<meta name="description" content="How the Global Mental Health Index is built: framework, indicators, construction steps, cadence and open decisions.">
+<link rel="icon" href="assets/brand/paracelsus-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@200..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Methodology <span id="ver"></span></p>
+      <h1 style="max-width:14ch">How the index is built</h1>
+      <p class="lede">The construction follows the OECD and EU Joint Research Centre handbook on composite indicators. This page sets out the working design; choices marked open are still being decided and will be versioned when settled.</p>
+      <p class="note">Draft. No scores have been calculated yet.</p>
+    </div>
+  </section>
+
+  <div class="wrap doc">
+    <section class="doc-sec" id="framework">
+      <header class="side"><span class="num">01</span><h2>Framework</h2></header>
+      <div class="main">
+        <p class="intro">The index asks three questions of each country: how people are doing, whether care is available when they need it, and which conditions shape where the country is heading.</p>
+        <div class="trio">
+          <div><h3>Outcomes</h3><p>Suicide, depression and anxiety, alcohol and drug harm, life evaluation.</p></div>
+          <div><h3>Care</h3><p>Workforce, beds, public spending, treatment coverage, policy and legislation, quality of care.</p></div>
+          <div><h3>Conditions</h3><p>Life satisfaction, social support, unemployment, and the three-year change in each outcome.</p></div>
+        </div>
+        <p>Economic indicators are reported alongside the score as context, not inside it. The index aims to show the effect of mental health on economies, so using economic inputs would make that argument circular.</p>
+      </div>
+    </section>
+
+    <section class="doc-sec" id="construction">
+      <header class="side"><span class="num">02</span><h2>Construction</h2></header>
+      <div class="main">
+        <ol class="steps">
+          <li><h3>Indicator selection</h3><p>Soundness, measurability, coverage and relevance, with proxies documented.</p></li>
+          <li><h3>Outliers and missing data</h3><p>Gaps are filled only by the stated rule (see open decisions), every filled value is flagged, and countries below the coverage threshold are not ranked.</p></li>
+          <li><h3>Multivariate check</h3><p>Correlations and principal components tested against the framework.</p></li>
+          <li><h3>Normalisation</h3><p>Indicators put on a common scale, with direction set so higher always means better.</p></li>
+          <li><h3>Weighting and aggregation</h3><p>Equal weights within pillars for version 1.0.</p></li>
+          <li><h3>Uncertainty and sensitivity</h3><p>A Monte Carlo simulation varies imputation, normalisation and weights; each country is published with a rank interval.</p></li>
+          <li><h3>Decomposition</h3><p>Every score can be broken down by pillar and indicator.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="doc-sec" id="change">
+      <header class="side"><span class="num">03</span><h2>Levels and change</h2></header>
+      <div class="main">
+        <p class="intro">A country with a stable high suicide rate is in a different position from one where the rate is rising. The index will report levels and the three-year change side by side.</p>
+      </div>
+    </section>
+
+    <section class="doc-sec" id="cadence">
+      <header class="side"><span class="num">04</span><h2>Release cadence</h2></header>
+      <div class="main">
+        <div class="duo">
+          <div><h3>Annual core index</h3><p>The full score and ranking, recalculated once a year, with a stated rule for carrying forward indicators that have not been updated. Most inputs are annual and arrive two to three years late.</p></div>
+          <div><h3>Quarterly pulse</h3><p>A short release limited to series that move within the year: monthly suicide counts in the Baltic states and Sweden, service data in England and Portugal, and US mortality and overdose deaths.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc-sec" id="open">
+      <header class="side"><span class="num">05</span><h2>Open decisions</h2></header>
+      <div class="main">
+        <div class="rows">
+          <details class="row"><summary>What the index measures</summary><div class="body"><p>Mental health, mental illness, or the direction a country is heading. Prevalence and service data describe illness; wellbeing and conditions describe health.</p><p class="default">Working default: all three pillars, reported separately as well as combined.</p></div></details>
+          <details class="row"><summary>Economic indicators</summary><div class="body"><p class="default">Working default: a separate context layer, outside the score.</p></div></details>
+          <details class="row"><summary>Levels, change, or both</summary><div class="body"><p class="default">Working default: both, side by side.</p></div></details>
+          <details class="row"><summary>Publishing entity</summary><div class="body"><p>Some data licences restrict use connected to a commercial enterprise. Whether the index is published by Paracelsus Recovery or by an independent foundation affects which sources can be used. See <a href="data.html#licences">licences</a>.</p></div></details>
+          <details class="row"><summary>Missing data</summary><div class="body"><p>A number on the site is always a published number. Where gaps are unavoidable in the score, the proposed rule is, in order:</p><ol class="plain"><li>On the dashboard, a gap stays blank and is labelled; older values are shown with their year.</li><li>In the score, the last observed value is carried forward for up to five years, flagged.</li><li>A gap between two observed years is filled with a straight line, flagged.</li><li>A country is ranked only with at least 70% of the indicators in each pillar; otherwise it is listed as "insufficient data", not ranked low.</li><li>Values estimated from related indicators are used only in the sensitivity analysis, where they widen the country's rank interval.</li></ol><p class="default">Projections: none in the score. Early estimates, the last final rate scaled by the change in provisional monthly counts, only for countries with monthly data, labelled and kept out of rankings.</p></div></details>
+          <details class="row"><summary>Weighting</summary><div class="body"><p class="default">Working default: equal weights within pillars for version 1.0, tested by sensitivity analysis. Expert or statistical weights may follow.</p></div></details>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="section-head">
+        <header class="side"><span class="num">06</span><h2>What goes in</h2></header>
+        <div class="main"><p>The full candidate list from the project specification. Status shows whether each publisher's code has been confirmed against the live API. Blocked and permission-needed sources are listed so the gaps are visible.</p></div>
+      </div>
+      <div class="table-wrap"><table id="ind-table"></table></div>
+    </div>
+  </section>
+
+  <div class="wrap doc">
+    <section class="doc-sec" id="changelog">
+      <header class="side"><span class="num">07</span><h2>Changelog</h2></header>
+      <div class="main">
+        <ul class="log"><li><strong>0.2-draft</strong><span>Missing-data rule proposed; Norway, Iceland, Serbia and Türkiye added from Eurostat data.</span></li><li><strong>0.1-draft</strong><span>Framework, indicator list and open-data pipeline set up; first data from Eurostat and CDC; national sources reviewed for 33 jurisdictions.</span></li></ul>
+      </div>
+    </section>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/js/layout.js"></script>
+<script>
+fetch("data/site.json").then(r => r.json()).then(d => {
+  document.getElementById("ver").textContent = "· version " + d.methodology_version;
+  const dir = { lower_better: "Lower is better", higher_better: "Higher is better", context: "Context", derived: "Derived" };
+  const tag = s => ({ confirmed: '<span class="tag ok">Confirmed</span>', UNVERIFIED: '<span class="tag warn">Unverified</span>',
+    blocked: '<span class="tag stop">Blocked</span>', manual: '<span class="tag plain">Manual file</span>', planned: '<span class="tag plain">Planned</span>' }[s] || s);
+  const esc = s => (s || "").replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+  const rows = d.spec.indicators.map(i => `<tr><td>${esc(i.pillar[0].toUpperCase() + i.pillar.slice(1))}</td><td>${esc(i.indicator)}</td><td>${esc(i.source)}</td><td><code>${esc(i.code)}</code></td><td>${dir[i.direction] || esc(i.direction)}</td><td>${tag(i.status)}</td><td class="muted">${esc(i.note)}</td></tr>`).join("");
+  document.getElementById("ind-table").innerHTML = `<thead><tr><th>Pillar</th><th>Indicator</th><th>Source</th><th>Code</th><th>Direction</th><th>Status</th><th>Note</th></tr></thead><tbody>${rows}</tbody>`;
+});
+</script>
+</body>
+</html>

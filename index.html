@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Global Mental Health Index</title>
+<meta name="description" content="An open, reproducible index of mental health across countries, built from free and credible public data. A research initiative of Paracelsus Recovery.">
+<link rel="icon" href="assets/brand/paracelsus-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@200..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<main>
+  <section class="hero hero-home">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">Paracelsus Recovery · Research</p>
+        <h1>Mental health is the economy's missing number.</h1>
+        <p class="lede">The Global Mental Health Index tracks how <span id="n-countries">37</span> countries are doing on mental health, built only from official statistics, so anyone can compare them and follow the trend.</p>
+        <div class="actions">
+          <a class="btn" href="dashboard.html">Explore the dashboard <span class="arrow">→</span></a>
+          <a class="btn ghost" href="methodology.html">Read the methodology</a>
+        </div>
+      </div>
+      <figure class="trend-card" aria-labelledby="trend-title">
+        <div class="trend-head">
+          <div>
+            <h2 id="trend-title">Suicide rate since 2015</h2>
+            <p class="muted small" id="trend-sub">Change since 2015 (2015 = 100)</p>
+          </div>
+          <select id="trend-pick" aria-label="Choose what to compare"></select>
+        </div>
+        <div class="trend-stats" id="trend-stats"></div>
+        <div class="chart" id="trend-chart"></div>
+        <figcaption class="source-line" id="trend-source"></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <header class="side"><span class="num">01</span><h2>Where countries stand</h2></header>
+        <div class="main">
+          <p class="intro">Each country's position on one indicator, in the latest year with comparable data.</p>
+          <p>These are positions on single indicators, not the index ranking, which follows once the method is settled. Click a country to compare it on the dashboard.</p>
+
+        </div>
+      </div>
+      <div class="positions">
+        <div class="ind-tabs" id="pos-tabs" role="tablist" aria-label="Indicator"></div>
+        <div class="panel"><div class="panel-head"><div><h3 id="pos-title">–</h3><div class="muted small" id="pos-sub"></div></div><a class="toggle" id="pos-link" href="dashboard.html">Full dashboard</a></div><div class="chart" id="pos-chart"></div><div id="pos-notes"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="section-head">
+        <header class="side"><span class="num">02</span><h2>Where version 2 stands</h2></header>
+        <div class="main"><p>Data collection has started; scoring waits until the method is settled.</p></div>
+      </div>
+      <div class="stats" id="stats" aria-live="polite">
+        <div class="stat"><span class="v">–</span><span class="l">jurisdictions in the first focus set</span></div>
+        <div class="stat"><span class="v">–</span><span class="l">indicators with open data loaded</span></div>
+        <div class="stat"><span class="v">–</span><span class="l">most recent year in the data</span></div>
+        <div class="stat"><span class="v">0</span><span class="l">scores published so far: the method is still being settled</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <header class="side"><span class="num">03</span><h2>Three pillars, one picture</h2></header>
+        <div class="main"><p>The structure follows the original 2020 concept: how people are doing, whether care is there when they need it, and the conditions that shape where a country is heading.</p></div>
+      </div>
+      <div class="grid-3">
+        <div><h3>Outcomes</h3><p class="muted">Suicide, depression and anxiety, alcohol and drug harm, life evaluation.</p></div>
+        <div><h3>Care</h3><p class="muted">Psychiatrists and the wider workforce, psychiatric beds, public spending, treatment coverage, policy and law.</p></div>
+        <div><h3>Conditions</h3><p class="muted">Life satisfaction, social support and loneliness, unemployment, and how each outcome is changing over three years.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="section-head">
+        <header class="side"><span class="num">04</span><h2>Nothing open does this yet</h2></header>
+        <div class="main"><p>Existing products are surveys of self-selected samples, dashboards without a score, or one-off reports. None combines statistics-based scoring, broad coverage, a regular refresh, open licences and reproducible code.</p></div>
+      </div>
+      <div class="offset">
+      <div class="rows">
+        <details class="row"><summary>Built only from open, official data</summary><div class="body"><p>Every number is pulled by script from a public API and stored untouched, so any figure can be traced back to its source file. Sources whose licences do not allow reuse are left out until permission is in place.</p></div></details>
+        <details class="row"><summary>Honest about uncertainty</summary><div class="body"><p>When scores are published, each country will carry a rank interval from a sensitivity analysis, not a single position. Gaps and imputed values are flagged.</p></div></details>
+        <details class="row"><summary>Fast where the data allows</summary><div class="body"><p>Most inputs are annual and two to three years old. A quarterly pulse tracks the few series that move within the year, currently England and the United States.</p></div></details>
+        <details class="row"><summary>Open to scrutiny</summary><div class="body"><p>Method, code and changelog are versioned. An external statistical audit before the first ranking is part of the proposed design. See <a href="about.html#independence">independence</a>.</p></div></details>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <header class="side"><span class="num">05</span><h2>Focus set</h2></header>
+        <div class="main">
+          <p class="intro">The 27 EU member states, the United Kingdom, Switzerland, Israel, China, Brazil and the United States.</p>
+          <p>Norway, Iceland, Serbia and Türkiye are also shown, from Eurostat data; their national sources have not been reviewed yet. The design is meant to extend to global coverage.</p>
+          <p style="margin-top:24px"><a class="btn" href="data.html#coverage">See data coverage <span class="arrow">→</span></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/charts.js"></script>
+<script src="assets/js/overview.js"></script>
+<script>
+fetch("data/site.json").then(r => r.json()).then(d => {
+  const years = d.indicators.flatMap(i => Object.values(i.series).flatMap(s => Object.keys(s))).map(Number);
+  const v = document.querySelectorAll("#stats .v");
+  v[0].textContent = d.jurisdictions.length;
+  v[1].textContent = d.indicators.length + Object.keys(d.pulse).filter(k => d.pulse[k].points).length;
+  v[2].textContent = Math.max(...years);
+}).catch(() => {});
+</script>
+</body>
+</html>
