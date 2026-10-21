@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Data &amp; sources · Global Mental Health Index</title>
+<meta name="description" content="Where the Global Mental Health Index data comes from, the licence status of every source, and how to download it.">
+<link rel="canonical" href="https://mentalgdp.org/data.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Global Mental Health Index">
+<meta property="og:title" content="Data &amp; sources · Global Mental Health Index">
+<meta property="og:description" content="Where the Global Mental Health Index data comes from, the licence status of every source, and how to download it.">
+<meta property="og:url" content="https://mentalgdp.org/data.html">
+<meta property="og:image" content="https://mentalgdp.org/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Global Mental Health Index: mental health is the economy's missing number. mentalgdp.org">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/brand/paracelsus-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@200..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<main>
+  <section class="hero" style="padding-bottom:40px">
+    <div class="wrap">
+      <p class="eyebrow">Data &amp; sources</p>
+      <h1 style="max-width:16ch">Every number has an address</h1>
+      <p class="lede">Figures are pulled by script from public APIs and stored exactly as received. Nobody retypes a value. Any number on this site can be traced to the file and request that produced it.</p>
+    </div>
+  </section>
+
+  <section class="follow">
+    <div class="wrap">
+      <div class="section-head">
+        <header class="side"><span class="num">01</span><h2>How it works</h2></header>
+        <div class="main"><p>Three steps, all by script, so every figure can be reproduced.</p></div>
+      </div>
+      <div class="grid-3">
+        <div><p class="eyebrow">Fetch</p><h3>From the publisher's API</h3><p class="muted">One script per source requests the data and saves the raw response with the URL and time of the request.</p></div>
+        <div><p class="eyebrow">Check</p><h3>Against the licence</h3><p class="muted">Only sources with an open licence verdict are published. The rest are listed with what is needed to use them.</p></div>
+        <div><p class="eyebrow">Build</p><h3>Into the dashboard</h3><p class="muted">A build script reads the stored files and writes the data behind this site. Re-running it reproduces every figure.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="sources">
+    <div class="wrap">
+      <div class="section-head">
+        <header class="side"><span class="num">02</span><h2>Indicators on the dashboard</h2></header>
+        <div class="main"><p>Each indicator below comes from an open-licence source, with the exact query and the date it was fetched.</p></div>
+      </div>
+      <div class="table-wrap"><table id="loaded"></table></div>
+      <p class="source-line">Eurostat data are reused under the <a href="https://ec.europa.eu/eurostat/help/copyright-notice">Eurostat copyright notice</a> (CC BY 4.0). CDC/NCHS data are US government works in the public domain. Socialstyrelsen data are CC0; source: Socialstyrelsen.</p>
+    </div>
+  </section>
+
+  <section id="licences">
+    <div class="wrap">
+      <div class="section-head">
+        <header class="side"><span class="num">03</span><h2>What we may use, and what is pending</h2></header>
+        <div class="main"><p>Three findings shape the index. The only global source of depression and anxiety prevalence (IHME) is non-commercial. WHO's dataset terms bar use that promotes a commercial enterprise, which also covers WHO figures relayed by the World Bank and UN. The Legatum Prosperity Index, the basis of the 2020 version, cannot be reused without written consent.</p></div>
+      </div>
+      <div class="table-wrap"><table id="lic"></table></div>
+      <p class="source-line">Verdicts were checked in October 2026 and are reviewed before every release. Licence wording is confirmed by a person before publication.</p>
+    </div>
+  </section>
+
+  <section class="band" id="coverage">
+    <div class="wrap">
+      <div class="section-head">
+        <header class="side"><span class="num">04</span><h2>Gaps we are working on</h2></header>
+        <div class="main"><p>Most inputs are annual and two to three years old. Health interview surveys run every five to seven years. National statistics offices and health ministries have now been reviewed for all 33 focus jurisdictions.</p></div>
+      </div>
+      <div class="key" aria-hidden="true">
+        <span><span class="yr">Year</span>&nbsp;latest year loaded, within five years</span>
+        <span><span class="yr dated">Year</span>&nbsp;latest year loaded, older</span>
+        <span><span class="yr none">–</span>&nbsp;no open data loaded</span>
+        <span><span class="yr found">Found</span>&nbsp;in-year series identified, not yet loaded</span>
+      </div>
+      <div class="coverage" style="margin-bottom:56px"><table id="matrix"></table></div>
+      <div class="offset">
+      <div class="rows">
+        <details class="row"><summary>United Kingdom</summary><div class="body"><p>Eurostat series for the UK end between 2014 and 2019. National sources are rich but split by nation: ONS for England and Wales, NRS for Scotland, NISRA for Northern Ireland, and NHS England monthly service statistics for England only.</p></div></details>
+        <details class="row"><summary>Switzerland</summary><div class="body"><p>Covered by Eurostat for suicide, workforce, beds and life satisfaction, but not by the EU health interview survey. Assisted suicide is reported separately from suicide.</p></div></details>
+        <details class="row"><summary>United States</summary><div class="body"><p>Monthly and quarterly provisional mortality from the CDC. Survey prevalence is annual since the Household Pulse mental health items stopped in September 2024.</p></div></details>
+        <details class="row"><summary>Israel, China and Brazil</summary><div class="body"><p>No open, comparable source is loaded yet. China has no official API or open licence; Brazil's Ministry of Health data carry a no-derivatives licence that needs a legal read.</p></div></details>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="download">
+    <div class="wrap">
+      <div class="section-head">
+        <header class="side"><span class="num">05</span><h2>Take the data with you</h2></header>
+        <div class="main">
+          <p>The full dashboard dataset is one JSON file: indicator series by jurisdiction and year, the US pulse series, and the specification tables. An API, an <code>llms.txt</code> file and an MCP server for AI agents are planned for the first release.</p>
+          <p style="margin-top:24px"><a class="btn" href="data/site.json">Download JSON <span class="arrow">↓</span></a></p>
+          <p class="small muted" id="gen"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/js/layout.js"></script>
+<script>
+fetch("data/site.json").then(r => r.json()).then(d => {
+  const esc = s => (s || "").replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+  document.getElementById("loaded").innerHTML = `<thead><tr><th>Indicator</th><th>Source</th><th>Dataset</th><th>Licence</th><th>Updated by source</th><th>Fetched</th></tr></thead><tbody>${
+    d.indicators.map(i => `<tr><td>${esc(i.title)}</td><td>${i.source}</td><td><a href="${esc(i.api_url)}"><code>${i.dataset}</code></a></td><td>${i.licence}</td><td>${i.source_updated}</td><td>${i.fetched.slice(0, 10)}</td></tr>`).join("")}${
+    ["suicide", "overdose_rate", "overdose_deaths"].map(k => { const p = d.pulse[k]; return `<tr><td>${esc(p.title)}</td><td>CDC/NCHS</td><td><a href="https://data.cdc.gov/resource/${p.dataset}.json"><code>${p.dataset}</code></a></td><td>${d.pulse.licence}</td><td>–</td><td>${d.pulse.fetched.slice(0, 10)}</td></tr>`; }).join("")}${(d.national || []).length ? `<tr><td>Suicide deaths, latest national figure (${d.national.length} countries, ${Math.min(...d.national.map(r => +r.year))}–${Math.max(...d.national.map(r => +r.year))})</td><td>National statistics offices</td><td><a href="dashboard.html#latest"><code>sources/national_*</code></a></td><td>Open licences (see register)</td><td>–</td><td>${d.national.map(r => r.fetched).sort().pop().slice(0, 10)}</td></tr>` : ""}${(() => { const se = d.pulse.sweden; return `<tr><td>${esc(se.title)} (monthly)</td><td>Socialstyrelsen</td><td><a href="https://sdb.socialstyrelsen.se/api/v1/sv/dodsorsaker_manad"><code>${se.dataset}</code></a></td><td>${se.licence}</td><td>to ${se.latest}</td><td>${se.fetched.slice(0, 10)}</td></tr>`; })()}</tbody>`;
+  const v = { open: '<span class="tag ok">Open</span>', permission_needed: '<span class="tag warn">Permission needed</span>', blocked: '<span class="tag stop">Blocked</span>',
+    unverified: '<span class="tag plain">Unverified</span>', depends: '<span class="tag warn">Depends on series</span>' };
+  document.getElementById("lic").innerHTML = `<thead><tr><th>Source</th><th>Access</th><th>Licence</th><th>Verdict</th><th>What is needed</th></tr></thead><tbody>${
+    d.spec.licences.map(l => `<tr><td>${l.terms_url ? `<a href="${esc(l.terms_url)}">${esc(l.source)}</a>` : esc(l.source)}</td><td>${esc(l.access)}</td><td>${esc(l.licence)}</td><td>${v[l.verdict] || esc(l.verdict)}</td><td class="muted">${esc(l.action_needed)}</td></tr>`).join("")}</tbody>`;
+  const now = new Date().getFullYear();
+  // Short column names; full titles stay on the dashboard
+  const short = { suicide: "Suicide rate", depression: "Depressive symptoms", psychiatrists: "Psychiatrists",
+    psy_beds: "Psychiatric beds", life_sat: "Life satisfaction", poor_support: "Poor social support" };
+  // In-year series identified by the country review (October 2026); only the US is loaded so far
+  const inYear = { USA: "loaded", GBR: "found", LTU: "found", LVA: "found", EST: "found", SWE: "found", PRT: "found",
+    DNK: "found", FIN: "found", ROU: "found", FRA: "found", BRA: "found" };
+  const cell = (iso, i) => {
+    const s = i.series[iso]; if (!s) return '<td><span class="yr none">–</span></td>';
+    const y = Object.keys(s).sort().pop();
+    return `<td><span class="yr ${now - y > 5 ? "dated" : ""}">${y}</span></td>`;
+  };
+  const pulse = iso => inYear[iso] === "loaded" ? '<td><span class="yr">Monthly</span></td>'
+    : inYear[iso] === "found" ? '<td><span class="yr found">Found</span></td>' : '<td><span class="yr none">–</span></td>';
+  const row = j => `<tr><td>${j.name}</td>${d.indicators.map(i => cell(j.iso3, i)).join("")}${pulse(j.iso3)}</tr>`;
+  const groups = [["EU member states", d.jurisdictions.filter(j => j.group === "EU")], ["Focus countries", d.jurisdictions.filter(j => j.group === "focus")],
+    ["Other European countries (Eurostat only, not yet reviewed)", d.jurisdictions.filter(j => j.group === "Europe")]];
+  const span = d.indicators.length + 2;
+  document.getElementById("matrix").innerHTML =
+    `<thead><tr><th>Jurisdiction</th>${d.indicators.map(i => `<th>${short[i.id] || i.title}</th>`).join("")}<th>In-year data</th></tr></thead><tbody>` +
+    groups.map(([g, js]) => `<tr class="group"><td colspan="${span}">${g}</td></tr>` + js.map(row).join("")).join("") + "</tbody>";
+  document.getElementById("gen").textContent = "Built " + d.generated.slice(0, 10) + ".";
+});
+</script>
+</body>
+</html>
