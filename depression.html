@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Depression · Global Mental Health Index</title>
+<meta name="description" content="How common depression is across Europe, who it affects, and what it means for a country, in plain language and official data.">
+<link rel="canonical" href="https://mentalgdp.org/depression.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Global Mental Health Index">
+<meta property="og:title" content="Depression · Global Mental Health Index">
+<meta property="og:description" content="How common depression is across Europe, who it affects, and what it means for a country, in plain language and official data.">
+<meta property="og:url" content="https://mentalgdp.org/depression.html">
+<meta property="og:image" content="https://mentalgdp.org/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Global Mental Health Index: mental health is the economy's missing number. mentalgdp.org">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/brand/paracelsus-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@200..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-topic="depression">
+<div id="site-header"></div>
+
+<main>
+  <section class="hero" style="padding-bottom:40px">
+    <div class="wrap">
+      <p class="eyebrow">Topic</p>
+      <h1>Depression</h1>
+      <p class="lede">The most common mental illness, and one of the biggest reasons people stop working or living fully. Here is how common it is across Europe, who it affects most, and what it means for a country.</p>
+      <div class="stats" id="tiles" style="margin-top:44px"></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="section-head">
+        <header class="side"><span class="num">01</span><h2>What this means for a country</h2></header>
+        <div class="main"><p class="intro">Depression is more than feeling low. It drains energy, sleep, concentration and hope for weeks at a time, and it is treatable.</p></div>
+      </div>
+      <div class="offset"><div class="trio" style="margin-top:0">
+        <div><h3>Longer, healthier lives</h3><p>People with depression and other mental disorders die earlier, on average, than the rest of the population: from suicide, but also from heart disease and other illness that is found and treated later (<a href="https://doi.org/10.1001/jamapsychiatry.2014.2502" rel="noopener">Walker et al., 2015</a>; <a href="https://doi.org/10.1016/S0140-6736(19)32316-5" rel="noopener">Plana-Ripoll et al., 2019</a>). Less depression means more years of life, and better ones.</p></div>
+        <div><h3>A stronger economy</h3><p>Depression is a leading cause of disability worldwide (<a href="https://www.who.int/news-room/fact-sheets/detail/depression" rel="noopener">WHO</a>). Most of its cost is not treatment but lost work: sick days, people at work who cannot function well, and early exits from the labour market.</p></div>
+        <div><h3>Families and the next generation</h3><p>Depression affects the people around the person who has it: partners, carers and children. Treating it early protects whole households, not only individuals.</p></div>
+      </div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <header class="side"><span class="num">02</span><h2>Country by country</h2></header>
+        <div class="main"><p>Choose a measure and a country, or click a country in the chart. Figures come from the European Health Interview Survey, which asks the same questions in every country.</p></div>
+      </div>
+      <div class="controls">
+        <div class="field field-wide"><span class="label">Measure</span><div class="ind-pills" id="measures" role="tablist" aria-label="Measure"></div></div>
+        <div class="field"><label for="geo">Country</label><select id="geo"></select></div>
+      </div>
+      <div class="two-col">
+        <div class="panel">
+          <div class="panel-head"><div><h3 id="bar-title">–</h3><div class="muted small" id="bar-sub"></div></div><button class="toggle" id="view">Table</button></div>
+          <div class="chart" id="bar"></div>
+          <p class="source-line" id="bar-source"></p>
+        </div>
+        <div class="stack"><div class="panel topic-card" id="card"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="section-head">
+        <header class="side"><span class="num">03</span><h2>Who is affected</h2></header>
+        <div class="main"><p>The same measure for <span id="who-geo">the EU as a whole</span>, split by sex, age and education. Change the country above to see its own pattern.</p></div>
+      </div>
+      <div class="who" id="who"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <header class="side"><span class="num">04</span><h2>What helps</h2></header>
+        <div class="main"><p>What countries can do, in broad strokes. The index will track some of these as care indicators.</p></div>
+      </div>
+      <div class="offset"><div class="rows">
+        <details class="row"><summary>Treatment that people can reach</summary><div class="body"><p>Talking therapies and medication both work for many people, and work best when started early. Many people with depression never receive treatment, because of waiting lists, cost, stigma or not knowing where to go.</p></div></details>
+        <details class="row"><summary>Spotting it early</summary><div class="body"><p>Family doctors, schools and workplaces are where depression is most often first noticed. Short screening questions, like the ones used in this survey, help people get to care sooner.</p></div></details>
+        <details class="row"><summary>The conditions around people</summary><div class="body"><p>Loneliness, debt, insecure work and poor housing all raise the risk of depression. The index's conditions pillar tracks some of these, such as social support and life satisfaction.</p></div></details>
+        <details class="row"><summary>Workplaces</summary><div class="body"><p>Phased returns to work, adjusted duties and managers trained to talk about mental health keep people in work and shorten time off.</p></div></details>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="section-head">
+        <header class="side"><span class="num">05</span><h2>About these figures</h2></header>
+        <div class="main">
+          <p>Depressive symptoms are measured with the PHQ-8, eight questions about the past two weeks: low mood, loss of interest, sleep, tiredness, appetite, self-worth, concentration, and feeling slowed down or restless. It is a screening tool, not a diagnosis.</p>
+          <p>The survey runs about every five years, so the latest comparable figures are from 2019, before the pandemic. Switzerland does not take part, the latest figures for the United Kingdom are from 2014, and countries outside Europe use different surveys and are not shown here yet.</p>
+          <p>Figures are shown as published by Eurostat and are not part of any index score. <a href="methodology.html">Methodology</a> · <a href="dashboard.html?ind=depression">Dashboard</a> · <a href="alcohol.html">Alcohol</a></p>
+          <p class="callout">If you are struggling, you are not alone. Talk to your doctor, or find a free, confidential helpline in your country at <a href="https://findahelpline.com/" rel="noopener">findahelpline.com</a>. In an emergency, call your local emergency number.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/charts.js"></script>
+<script src="assets/js/topic.js"></script>
+</body>
+</html>

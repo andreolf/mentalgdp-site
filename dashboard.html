@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dashboard · Global Mental Health Index</title>
+<meta name="description" content="Explore the open indicator data behind the Global Mental Health Index.">
+<link rel="canonical" href="https://mentalgdp.org/dashboard.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Global Mental Health Index">
+<meta property="og:title" content="Dashboard · Global Mental Health Index">
+<meta property="og:description" content="Explore the open indicator data behind the Global Mental Health Index.">
+<meta property="og:url" content="https://mentalgdp.org/dashboard.html">
+<meta property="og:image" content="https://mentalgdp.org/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Global Mental Health Index: mental health is the economy's missing number. mentalgdp.org">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/brand/paracelsus-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@200..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<main>
+  <section class="hero" style="padding-bottom:40px">
+    <div class="wrap">
+      <p class="eyebrow">Dashboard</p>
+      <h1 style="max-width:18ch">The indicators, country by country</h1>
+      <p class="lede">These are the open-licence indicators loaded so far. They are shown as published, without scoring or weighting, so no ranking should be read into the order.</p>
+    </div>
+  </section>
+
+  <section class="follow">
+    <div class="wrap">
+      <div class="section-head">
+        <header class="side"><span class="num">01</span><h2>Explore an indicator</h2></header>
+        <div class="main"><p>Choose an indicator and up to three countries to compare. You can also click any country in the charts; click it again to remove it.</p><p>Each indicator shows its latest year with comparable figures across the jurisdictions. Newer, provisional figures are in <a href="#latest">The latest data</a>.</p></div>
+      </div>
+      <div class="controls">
+        <div class="field field-wide">
+          <span class="label">Indicator</span>
+          <div class="ind-pills" id="ind" role="tablist" aria-label="Indicator"></div>
+        </div>
+        <div class="field">
+          <span class="label" id="cmp-label">Compare up to three</span>
+          <div class="pills" id="cmp" role="group" aria-labelledby="cmp-label"></div>
+        </div>
+        <div class="field">
+          <label for="add">Add a country</label>
+          <select id="add"><option value="">Choose…</option></select>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="panel">
+          <div class="panel-head">
+            <div><h3 id="bar-title">–</h3><div class="muted small" id="bar-sub"></div></div>
+            <button class="toggle" data-target="bar">Table</button>
+          </div>
+          <div class="chart" id="bar"></div>
+          <div class="legend" id="bar-legend"></div>
+          <p class="source-line" id="bar-source"></p>
+          <div id="bar-notes"></div>
+        </div>
+        <div class="stack">
+          <div class="panel">
+            <div class="panel-head">
+              <div><h3 id="line-title">Over time</h3><div class="muted small" id="line-sub"></div></div>
+              <button class="toggle" data-target="line">Table</button>
+            </div>
+            <div class="chart" id="line"></div>
+            <div class="legend" id="line-legend"></div>
+            <p class="source-line" id="ind-note"></p>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><div><h3>Your comparison</h3><div class="muted small" id="cmp-sub"></div></div></div>
+            <div class="cmp-cards" id="cmp-cards"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="latest">
+    <div class="wrap">
+      <div class="section-head">
+        <header class="side"><span class="num">02</span><h2>The latest data</h2></header>
+        <div class="main">
+          <p class="intro">Rates that compare countries fairly arrive about two and a half years late: every death needs a certified cause. A few series move within the year.</p>
+          <p>They are provisional and revised as records are completed, so they show direction, not final levels. More countries will be added as their licences are confirmed.</p>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="panel">
+          <div class="panel-head"><div><h3>Sweden: suicide deaths</h3><div class="muted small">Deaths in the 12 months ending each month, ICD-10 X60–X84</div></div><button class="toggle" data-target="pulse-se">Table</button></div>
+          <div class="ytd" id="se-ytd"></div>
+          <div class="chart" id="pulse-se"></div>
+          <p class="source-line" id="se-source"></p>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><div><h3>United States: suicide and overdose death rates</h3><div class="muted small">Per 100,000, age-adjusted, 12 months ending each quarter</div></div><button class="toggle" data-target="pulse-rates">Table</button></div>
+          <div class="chart" id="pulse-rates"></div>
+          <div class="legend" id="pulse-rates-legend"></div>
+        </div>
+      </div>
+      <div class="panel" style="margin-top:20px">
+        <div class="panel-head"><div><h3>United States: drug overdose deaths</h3><div class="muted small">Reported deaths in the 12 months ending each month</div></div><button class="toggle" data-target="pulse-od">Table</button></div>
+        <div class="chart" id="pulse-od"></div>
+      </div>
+      <div class="panel" style="margin-top:20px">
+        <div class="panel-head"><div><h3>Latest national figures: suicide</h3><div class="muted small">Newest annual figure from each country's own statistics office, where it is ahead of the comparable Eurostat year</div></div></div>
+        <div class="table-wrap natl"><table id="natl"></table></div>
+        <p class="source-line">National figures use each country's own definitions and rate types, so they are not ranked against each other; positions on the dashboard use the comparable Eurostat figures. "Calculated" rates are deaths divided by population from the same statistics office, computed by our build script; where an office publishes counts only, no rate is shown.</p>
+        <div id="natl-notes"></div>
+      </div>
+      <p class="source-line" id="pulse-source"></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <header class="side"><span class="num">03</span><h2 id="pos-title">How positions have changed</h2></header>
+        <div class="main"><p>Each country's place among the jurisdictions reporting this indicator, from best to worst by the indicator's own direction. This is a position on one indicator, not an index ranking. <a href="data.html#coverage">See data coverage</a>.</p></div>
+      </div>
+      <div class="two-col">
+        <div class="panel">
+          <div class="panel-head"><div><h3 id="db-title">–</h3><div class="muted small" id="db-sub"></div></div><button class="toggle" data-target="db">Table</button></div>
+          <div class="chart" id="db"></div>
+          <div class="legend" id="db-legend"></div>
+          <div id="db-notes"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><div><h3 id="bump-title">Position each year</h3><div class="muted small" id="bump-sub"></div></div></div>
+          <div class="chart" id="bump"></div>
+          <div class="legend" id="bump-legend"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/charts.js"></script>
+<script src="assets/js/dashboard.js"></script>
+</body>
+</html>
